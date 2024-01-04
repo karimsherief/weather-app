@@ -1,12 +1,9 @@
-::-webkit-scrollbar {
-    display: none;
-}
-
 .current__weather__hours {
     cursor: pointer;
     user-select: none;
     transition: .3s ease;
     transform: scale(0.98);
+    scrollbar-width: none;
 }
 
 .current__weather__hours.active {
@@ -17,6 +14,7 @@
 
 .hour {
     width: 200px;
+    user-select: none;
 }
 
 .temperature {
@@ -30,6 +28,7 @@ img {
     aspect-ratio: 1 / 1;
     object-fit: cover;
     display: block;
+    pointer-events: none;
 }
 
 .loader {
