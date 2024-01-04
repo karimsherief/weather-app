@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <meta name="description" content="Assignment 11" />
+    <title>Weather app</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- <link href="styles/bootstrap.min.css" rel="stylesheet" /> -->
+    <!-- <link href="styles/all.min.css" rel="stylesheet" /> -->
+    <link href="styles/main.css" rel="stylesheet" />
+  </head>
+  <body data-bs-theme="dark">
+    <div class="loader">
+      <i class="fa-solid fa-spinner fa-spin fa-5x"></i>
+    </div>
+    <nav class="navbar">
+      <div class="container">
+        <div
+          class="d-flex flex-column flex-sm-row align-items-center w-100 justify-content-between gap-3"
+        >
+          <h1 class="navbar-brand m-0">Weather</h1>
+          <div>
+            <form class="d-flex ms-auto" role="search">
+              <input
+                class="form-control me-2 shadow-none"
+                type="search"
+                placeholder="City"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-info fw-bold" type="submit">
+                <i class="fa-solid fa-search"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <div class="container">
+        <p class="error-message text-center text-danger fs-4"></p>
+        <div class="d-flex flex-column mt-3 gap-3">
+          <div class="row row-cols-lg-3 row-cols-1 gap-lg-0 gap-3">
+            <div>
+              <div class="bg-body-secondary h-100 rounded shadow">
+                <div class="fs-5 text-center bg-body-tertiary py-2 rounded-top">
+                  <i class="fa-solid fa-calendar-alt"></i>
+                  <span class="current__weather__date"> ---- </span>
+                </div>
+                <div class="d-flex flex-column align-items-center py-2 gap-2">
+                  <div class="fs-6">
+                    <i class="fa-solid fa-location-dot me-1"></i>
+                    <span class="current__weather__city"> ---- </span>
+                  </div>
+                  <div class="d-flex flex-column align-items-center">
+                    <span class="fs-3 current__weather__temperature temperature"
+                      >---&#xb0;C</span
+                    >
+                    <img
+                      loading="lazy"
+                      class="current__weather__condition__icon"
+                    />
+                    <p
+                      class="fs-5 m-0 text-capitalize current__weather__condition"
+                    >
+                      ----
+                    </p>
+                  </div>
+                  <div
+                    class="d-flex flex-wrap justify-content-center gap-3 current__weather__details"
+                  >
+                    <span>
+                      <i class="fa-solid fa-compass"></i>
+                      <span class="wind__direction"> ---- </span>
+                    </span>
+                    <span>
+                      <i class="fa-solid fa-wind"></i>
+                      <span class="wind__speed"> --- km/h </span>
+                    </span>
+                    <span>
+                      <i class="fa-solid fa-water"></i>
+                      <span class="humidity"> ---% </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="upcoming-days bg-body-secondary h-100 rounded shadow">
+                <div class="fs-5 text-center bg-body-tertiary py-2 rounded-top">
+                  <i class="fa-solid fa-calendar-alt"></i>
+                  <span class="upcoming__days__date"> --- </span>
+                </div>
+                <div class="d-flex flex-column align-items-center py-2 gap-3">
+                  <div class="d-flex flex-column align-items-center">
+                    <div class="text-center mb-1">
+                      <h3 class="m-0 upcoming__days__max-temp temperature">
+                        ---&#xb0;C
+                      </h3>
+                      <h5 class="m-0 upcoming__days__min-temp temperature">
+                        ---&#xb0;C
+                      </h5>
+                    </div>
+                    <div>
+                      <img
+                        class="upcoming__days__condition__icon"
+                        loading="lazy"
+                      />
+                    </div>
+                    <p
+                      class="fs-5 m-0 text-capitalize upcoming__days__condition"
+                    >
+                      ---
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="upcoming-days bg-body-secondary h-100 rounded shadow">
+                <div class="fs-5 text-center bg-body-tertiary py-2 rounded-top">
+                  <i class="fa-solid fa-calendar-alt"></i>
+                  <span class="upcoming__days__date"> --- </span>
+                </div>
+                <div class="d-flex flex-column align-items-center py-2 gap-3">
+                  <div class="d-flex flex-column align-items-center">
+                    <div class="text-center mb-1">
+                      <h3 class="m-0 upcoming__days__max-temp temperature">
+                        ---&#xb0;C
+                      </h3>
+                      <h5 class="m-0 upcoming__days__min-temp temperature">
+                        ---&#xb0;C
+                      </h5>
+                    </div>
+                    <div>
+                      <img
+                        class="upcoming__days__condition__icon"
+                        loading="lazy"
+                      />
+                    </div>
+                    <p
+                      class="fs-5 m-0 text-capitalize upcoming__days__condition"
+                    >
+                      ---
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-body-tertiary rounded p-3">
+            <div
+              class="d-flex flex-nowrap row overflow-x-scroll current__weather__hours"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
