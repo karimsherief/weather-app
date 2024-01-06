@@ -59,8 +59,8 @@ if ("geolocation" in navigator) {
 // Events
 form.addEventListener('submit', e => {
     e.preventDefault()
-    submit.disabled = true
     if (search.value) {
+        submit.disabled = true
         getWeather(0, 0, search.value)
     }
 })
